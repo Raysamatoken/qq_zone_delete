@@ -29,7 +29,7 @@ function ajax(options) {
     xhr.withCredentials = true;
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && (/^2\d{2}/.test(xhr.status) || xhr.status === 304)) {
-            QZONE.FP.showMsgbox('删除' + +'条说说成功')
+            QZONE.FP.showMsgbox('删除' + +'条说说成功');
         }
     }
     xhr.send(serialize(options.data))
@@ -48,7 +48,7 @@ function deleteMsg() {
     var tid = '';
     for (var item of data.msglist) {
         tid = item.tid;
-        QZONE.FP.showMsgbox('删除' + data.num + '条说说成功')
+        QZONE.FP.showMsgbox('删除' + data.num + '条说说成功');
         (function(opt) {
             opt.qzreferrer += Math.random();
             ajax(opt);
